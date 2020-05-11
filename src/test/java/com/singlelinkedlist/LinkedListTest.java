@@ -18,7 +18,19 @@ public class LinkedListTest {
     }
 
     @Test
-    public void givenIntegerInput_IfFound_ReturnTrue() throws Exception {
+    public void givenInput_IfFound_ReturnTrue() throws Exception {
         Assert.assertTrue(linkedList.searchWord("a"));
+    }
+
+    @Test
+    public void givenIntegerInput_IfFound_ReturnTrue() throws Exception {
+        Assert.assertTrue(linkedList.searchWord( "1"));
+    }
+
+    @Test
+    public void invokedlistmethod_ShouldReturnTrue_IfEmptyListIsCreated() throws Exception {
+        linkedList.list();
+        int size = linkedList.size();
+        Assert.assertEquals(0,size);
     }
 }

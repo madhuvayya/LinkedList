@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.singlelinkedlist.LinkedListTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-05-11T04:11:22" hostname="PRABHAKAR" time="0.153">
+<testsuite name="com.singlelinkedlist.LinkedListTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2020-05-11T04:59:53" hostname="PRABHAKAR" time="0.076">
   <properties/>
-  <testcase name="givenInput_IfFound_ReturnTure" classname="com.singlelinkedlist.LinkedListTest" time="0.15"/>
+  <testcase name="givenInput_IfFound_ReturnTrue" classname="com.singlelinkedlist.LinkedListTest" time="0.069"/>
+  <testcase name="givenInput_IfFound_ReturnTure" classname="com.singlelinkedlist.LinkedListTest" time="0.0"/>
   <testcase name="givenInput_IfNotFound_ReturnFalse" classname="com.singlelinkedlist.LinkedListTest" time="0.001"/>
+  <testcase name="invokedlistmethod_ShouldReturnTrue_IfEmptyListIsCreated" classname="com.singlelinkedlist.LinkedListTest" time="0.002"/>
   <testcase name="givenIntegerInput_IfFound_ReturnTrue" classname="com.singlelinkedlist.LinkedListTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
