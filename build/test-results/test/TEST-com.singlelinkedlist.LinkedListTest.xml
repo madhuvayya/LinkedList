@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.singlelinkedlist.LinkedListTest" tests="6" skipped="0" failures="1" errors="0" timestamp="2020-05-13T04:01:53" hostname="PRABHAKAR" time="0.025">
+<testsuite name="com.singlelinkedlist.LinkedListTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2020-05-13T04:15:06" hostname="PRABHAKAR" time="0.005">
   <properties/>
   <testcase name="invokedAddMethod_WhenNotInTheFile_ShouldAddedItemList" classname="com.singlelinkedlist.LinkedListTest" time="0.005">
     <failure message="java.lang.NullPointerException" type="java.lang.NullPointerException">java.lang.NullPointerException
-	at com.singlelinkedlist.LinkedList.add(LinkedList.java:39)
+	at com.singlelinkedlist.LinkedList.add(LinkedList.java:41)
 	at com.singlelinkedlist.LinkedListTest.invokedAddMethod_WhenNotInTheFile_ShouldAddedItemList(LinkedListTest.java:40)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -54,11 +54,6 @@
 	at java.base/java.lang.Thread.run(Thread.java:830)
 </failure>
   </testcase>
-  <testcase name="givenInput_IfFound_ReturnTrue" classname="com.singlelinkedlist.LinkedListTest" time="0.015"/>
-  <testcase name="givenInput_IfFound_ReturnTure" classname="com.singlelinkedlist.LinkedListTest" time="0.001"/>
-  <testcase name="givenInput_IfNotFound_ReturnFalse" classname="com.singlelinkedlist.LinkedListTest" time="0.001"/>
-  <testcase name="invokedlistmethod_ShouldReturnTrue_IfEmptyListIsCreated" classname="com.singlelinkedlist.LinkedListTest" time="0.0"/>
-  <testcase name="givenIntegerInput_IfFound_ReturnTrue" classname="com.singlelinkedlist.LinkedListTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
