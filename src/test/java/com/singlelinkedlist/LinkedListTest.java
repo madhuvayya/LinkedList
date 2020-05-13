@@ -33,4 +33,14 @@ public class LinkedListTest {
         int size = linkedList.size();
         Assert.assertEquals(0,size);
     }
+
+    @Test
+    public void invokedAddMethod_WhenNotInTheFile_ShouldAddedItemList() throws Exception {
+        linkedList.list();
+        linkedList.add("25");
+        linkedList.add("bat");
+        linkedList.add("v");
+        int size = linkedList.size();
+        Assert.assertEquals(3,size);
+    }
 }

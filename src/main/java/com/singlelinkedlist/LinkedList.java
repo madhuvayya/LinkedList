@@ -1,38 +1,55 @@
 package com.singlelinkedlist;
 
-import com.opencsv.CSVReader;
-import java.io.IOException;
-import java.io.Reader;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.util.List;
 
-public class LinkedList<E> {
+public class LinkedList<T extends Comparable> {
+
+    private class Node<T> {
+        T data;
+        Node next;
+    }
+
+    private LinkedList<T> linkedList;
     Node head;
 
-    private static final String INPUT_CSV_FILE = "./src/main/resources/input.csv";
     private int numberOfNodes=0;
+    private List<String> strings;
 
-    public boolean searchWord(E value) throws IOException {
-        CSVReader csvReader;
-        try {
-            Reader reader = Files.newBufferedReader(Paths.get(INPUT_CSV_FILE));
-            csvReader = new CSVReader(reader);
-            String[] strings;
-            while (( strings = csvReader.readNext()) != null) {
-                if(value.equals(strings[0]))
-                    return true;
-            }
-        } catch ( IOException e ) {
-            e.printStackTrace();
-        }
+    private void readCSVFile() {
+        CSVFileReadWrite csvFileReadWrite = new CSVFileReadWrite();
+        strings = csvFileReadWrite.readCSVFile();
+    }
+
+    public <T> boolean searchWord(T element) {
+        readCSVFile();
+        if(strings.contains(element))
+            return true;
         return false;
     }
 
     public void list() {
-        Node linkedList = new Node();
+        head = null;
     }
 
     public int size(){
         return numberOfNodes;
+    }
+
+    public <T extends Comparable> void add(T item) {
+            if (linkedList.searchWord(item)) {
+            }else{
+                Node newNode = new Node();
+                newNode.data = item;
+                if (head == null) {
+                    head = newNode;
+                } else {
+                    Node currentNode = head;
+                    while (currentNode.next != null) {
+                        currentNode = currentNode.next;
+                    }
+                    currentNode.next = newNode;
+                }
+                numberOfNodes++;
+            }
     }
 }
