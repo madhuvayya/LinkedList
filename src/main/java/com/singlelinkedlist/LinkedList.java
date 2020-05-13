@@ -106,4 +106,19 @@ public class LinkedList<T extends Comparable> {
         return false;
     }
 
+    public void pop() {
+       Node currentNode = head;
+       int index = 0;
+       while(currentNode.next!=null){
+           currentNode = currentNode.next;
+           index++;
+       }
+
+        currentNode = head;
+        for(int i=0;i<index-1;i++){
+            currentNode = currentNode.next;
+        }
+        currentNode.next = null;
+        numberOfNodes--;
+    }
 }

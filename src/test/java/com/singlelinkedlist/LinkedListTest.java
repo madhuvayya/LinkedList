@@ -67,4 +67,11 @@ public class LinkedListTest {
     public void invokedIsEmptyMethod_WhenNotEmpty_ShouldReturnFalse() {
         Assert.assertFalse(linkedList.isEmpty());
     }
+
+    @Test
+    public void invokedPopMethod_WhenRemovesAnItem_ShouldReduceSize() {
+        linkedList.pop();
+        int size = linkedList.size();
+        Assert.assertEquals(2,size);
+    }
 }
