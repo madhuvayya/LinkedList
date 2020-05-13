@@ -63,4 +63,8 @@ public class LinkedListTest {
         Assert.assertFalse(linkedList.search("mdmsnjdc"));
     }
 
+    @Test
+    public void invokedIsEmptyMethod_WhenNotEmpty_ShouldReturnFalse() {
+        Assert.assertFalse(linkedList.isEmpty());
+    }
 }

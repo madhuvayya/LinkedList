@@ -99,4 +99,11 @@ public class LinkedList<T extends Comparable> {
         }
         return false;
     }
+
+    public boolean isEmpty() {
+        if( head == null)
+            return true;
+        return false;
+    }
+
 }
