@@ -50,4 +50,17 @@ public class LinkedListTest {
         int size = linkedList.size();
         Assert.assertEquals(1,size);
     }
+
+    @Test
+    public void invokedSearchMethod_WhenFound_ShouldReturnTrue() {
+        linkedList.add("25");
+        linkedList.add("bat");
+        Assert.assertTrue(linkedList.search("bat"));
+    }
+
+    @Test
+    public void invokedSearchMethod_WhenFound_ShouldReturnFalse() {
+        Assert.assertFalse(linkedList.search("mdmsnjdc"));
+    }
+
 }

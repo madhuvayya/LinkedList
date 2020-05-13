@@ -69,7 +69,7 @@ public class LinkedList<T extends Comparable> {
         }
     }
 
-    private <T extends Comparable> void removeAt(int index) {
+    public <T extends Comparable> void removeAt(int index) {
         if ( index == 0 ){
             head = head.next;
         }else {
@@ -83,6 +83,20 @@ public class LinkedList<T extends Comparable> {
              nextNode=null;
              numberOfNodes--;
         }
+    }
 
+    public <T extends Comparable> boolean search(T item) {
+        if ( head == null ){
+            System.out.println("No elements in list");
+        }else {
+            Node currentNode = head;
+            while (currentNode != null){
+                if(currentNode.data==item){
+                    return true;
+                }
+            }
+
+        }
+        return false;
     }
 }
